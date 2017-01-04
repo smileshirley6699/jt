@@ -3,7 +3,7 @@ import index from './vues/index/index.vue';
 import vrouter from 'vue-router';
 import vsource from 'vue-resource';
 import  logo from "./imgs/logo.png";
-import  text from "./vues/text.vue";
+import  text from "./vues/components/text.vue";
 import commoncss from "./css/common.css";
 
 document.getElementById("link_favicon_img").href = logo;

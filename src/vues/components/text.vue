@@ -1,6 +1,7 @@
 <template>
     <div>
-input
+        <h2>Input输入框</h2>
+        <h3>基础用法</h3>
     </div>
 </template>
 

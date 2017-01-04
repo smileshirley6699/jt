@@ -7,7 +7,7 @@
         </div>
         <div class="left-menu">
             <ul>
-                <li><router-link to="/components/text" >text</router-link></li>
+                <li><router-link to="/components/text" >输入框</router-link></li>
                 <li><router-link to="/components/radio" >radio</router-link></li>
                 <li><router-link to="/components/checkbox" >checkbox</router-link></li>
                 <li><router-link to="/components/select" >select</router-link></li>
@@ -18,6 +18,9 @@
         </div>
         <div class="content">
             <router-view></router-view>
+        </div>
+        <div class="footer">
+            <span>Copyright &copy; 2016-2017</span>
         </div>
     </div>
 </template>
@@ -37,14 +40,14 @@
         right: 0;
     }
     .header {
-        border-bottom: 2px solid #428bca;
+        border-bottom: 1px solid #eaeefb;
     }
     .content {
         min-height: 450px;
-        padding: 10px;
+        padding: 30px;
     }
     .header-link {
-        padding: 15px;
+        padding: 20px;
         line-height: 20px;
         display: block;
         position: relative;
@@ -57,17 +60,40 @@
         width: 260px;
         top: 70px;
         text-align: right;
+        z-index: 1;
+    }
+    .left-menu:after {
+        position: absolute;
+        content: "";
+        border-right: 1px solid #eaeefb;
+        top: 0;
+        bottom: 0px;
     }
     .left-menu a {
         font-size: 14px;
         text-decoration: none;
-        color: #428bca;
-        padding: 10px;
+        color: #5e6d82;
+        padding: 10px 50px 10px 10px;
         line-height: 20px;
         display: block;
     }
+    .left-menu a:hover, .left-menu a:active, .router-link-active{
+        color: #20a0ff !important;
+    }
     .content {
         position: relative;
-        left: 280px;
+        padding-left: 280px;
+    }
+    .footer {
+        height: 100px;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        border-top: 1px solid #eaeefb;
+    }
+    .footer span{
+        position: relative;
+        top: 40px;
     }
 </style>
