@@ -1,5 +1,8 @@
 @import "./reset.css";
 @import "./font-awesome/font-awesome.less";
+* {
+    box-sizing: border-box;
+}
 body {
     font-family: 'Microsoft YaHei';
     font-size: 12px;

@@ -1,31 +1,26 @@
 import Vue from 'Vue';
-import App from './vues/AppVue/AppVue.vue';
+import index from './vues/index/index.vue';
 import vrouter from 'vue-router';
 import vsource from 'vue-resource';
-import  First from  "./vues/first.vue"
-import  Second from  "./vues/second.vue";
-import  facvicon from "./imgs/logo.png";
+import  logo from "./imgs/logo.png";
+import  text from "./vues/text.vue";
 import commoncss from "./css/common.css";
 
-document.getElementById("link_favicon_img").href = facvicon;
+document.getElementById("link_favicon_img").href = logo;
 Vue.use(vrouter);
 Vue.use(vsource);
-const curRouter =  new vrouter({
+const router =  new vrouter({
     mode: 'history',
     base: __dirname,
     routes: [
         {
-            path: '/first',
-            component: First
-        },
-        {
-            path: '/second',
-            component: Second
+            path: '/components/text',
+            component: text
         }
     ]
 });
-var indexVue = new Vue({
-    router : curRouter,
-    el : "#app1",
-    components: { App }
+new Vue({
+    router : router,
+    el : "#index_content",
+    components: { index }
 });
