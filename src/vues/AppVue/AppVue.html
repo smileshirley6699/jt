@@ -1,0 +1,12 @@
+<div>
+    <img src="../../imgs/logo.png">
+    <h1>{{ msg }}</h1>
+    <ul>
+        <li v-for="item in articles">{{ item.title }} - {{ item.alt }}</li>
+    </ul>
+    <ul>
+        <li><router-link to="/first">first</router-link></li>
+        <li><router-link to="/second">second</router-link></li>
+    </ul>
+    <router-view></router-view>
+</div>

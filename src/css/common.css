@@ -1,0 +1,18 @@
+@import "./reset.css";
+@import "./font-awesome/font-awesome.less";
+body {
+    font-family: 'Microsoft YaHei';
+    font-size: 12px;
+}
+.text-center {
+    text-align: center;
+}
+.m-t-20 {
+    margin-top: 20px;
+}
+.p-t-50 {
+    padding-top: 50px;
+}
+.f-r {
+    float: right;
+}
